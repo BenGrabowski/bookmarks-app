@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import BookmarksContext from '../BookmarksContext';
 import BookmarkItem from '../BookmarkItem/BookmarkItem';
+// import PropTypes from 'prop-types';
 import './BookmarkList.css'
 
 class BookmarkList extends Component {

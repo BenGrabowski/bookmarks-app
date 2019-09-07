@@ -7,9 +7,12 @@ export default function Rating(props) {
       ? <span key={i}>&#9733; </span>
       : <span key={i}>&#9734; </span>
   );
+
   return (
     <div className="rating">
       {stars}
     </div>
   );
 }
+
+
