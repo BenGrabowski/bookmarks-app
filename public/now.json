@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "alias": "bengrabowskis-bookmarks-app",
+    "alias": "bengrabowskis-bookmark-app",
     "name": "bookmarks-app",
     "routes": [
         {
