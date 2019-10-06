@@ -29,8 +29,6 @@ class App extends Component {
   }
 
   deleteBookmark = bookmarkId => {
-    console.log(bookmarkId)
-    // todo: remove bookmark with bookmarkId from state
     const newBookmarks = this.state.bookmarks.filter(bm =>
       bm.id !== bookmarkId
     )
@@ -39,8 +37,12 @@ class App extends Component {
     })
   }
 
-  updateBookmark = () => {
-
+  updateBookmark = updatedBookmark => {
+    this.setState({
+      bookmarks: this.state.bookmarks.map(bm =>
+          (bm.id !== updatedBookmark.id) ? bm : updatedBookmark
+        )
+    })
   }
 
   componentDidMount() {
@@ -49,6 +51,7 @@ class App extends Component {
       headers: {
         'content-type': 'application/json',
         'Authorization': `Bearer ${config.API_KEY}`
+        // 'Authorization': `Bearer 79b9eb76-f9fc-44d1-98a8-d53ac29c77e1`
       }
     })
       .then(res => {

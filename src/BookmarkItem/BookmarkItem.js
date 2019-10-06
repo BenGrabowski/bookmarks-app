@@ -9,8 +9,9 @@ function deleteBookmarkRequest(bookmarkId, cb) {
   fetch(config.API_ENDPOINT + `/${bookmarkId}`, {
     method: 'DELETE',
     headers: {
-      'content-type': 'application/json',
-      'authorization': `bearer ${config.API_KEY}`
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${config.API_KEY}`
+      // 'Authorization': `Bearer 79b9eb76-f9fc-44d1-98a8-d53ac29c77e1`
     }
   })
     .then(res => {
